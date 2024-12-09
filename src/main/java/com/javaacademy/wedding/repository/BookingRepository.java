@@ -24,6 +24,4 @@ public class BookingRepository {
         return bookingStorage.getBookingStorage().values().stream().toList();
     }
 
-
-
 }

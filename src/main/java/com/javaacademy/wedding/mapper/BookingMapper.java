@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BookingMapper {
+    private final String ID_TEMPLATE = "%d - %d";
     public BookingDto convertToDto(Booking booking) {
         return new BookingDto(booking.getMonthNumber(), booking.getDayNumber(), booking.isBooked());
     }
@@ -17,6 +18,6 @@ public class BookingMapper {
     }
 
     private String createId(CreateBookingDto createBookingDto) {
-        return "%d - %d".formatted(createBookingDto.getMonthNumber(), createBookingDto.getDayNumber());
+        return ID_TEMPLATE.formatted(createBookingDto.getMonthNumber(), createBookingDto.getDayNumber());
     }
 }

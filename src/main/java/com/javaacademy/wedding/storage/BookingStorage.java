@@ -12,5 +12,4 @@ public class BookingStorage {
     @Getter
     private final Map<String, Booking> bookingStorage = new HashMap<>();
 
-
 }
